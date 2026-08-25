@@ -1,0 +1,285 @@
+/* ==========================================================================
+   About Page
+   Purpose: tell the restaurant story with calm editorial composition.
+   ========================================================================== */
+
+.about-hero {
+  padding-top: clamp(4rem, 3rem + 4vw, 8rem);
+}
+
+.about-hero__grid {
+  display: grid;
+  gap: var(--space-2xl);
+  align-items: end;
+}
+
+.about-hero__copy h1 {
+  max-width: 12ch;
+  font-size: var(--text-display);
+}
+
+.about-hero__media,
+.about-images__large,
+.about-images__small,
+.about-chef__media,
+.about-closing__media {
+  position: relative;
+  display: grid;
+  overflow: hidden;
+  color: var(--color-white-soft);
+  background:
+    linear-gradient(135deg, rgba(28, 28, 25, 0.18), rgba(57, 68, 56, 0.7)),
+    var(--color-brand);
+}
+
+.about-hero__media {
+  min-height: clamp(26rem, 50vw, 42rem);
+  place-items: end start;
+  padding: var(--space-xl);
+}
+
+.about-hero__media span,
+.about-images span,
+.about-chef__media span {
+  font-size: var(--text-xs);
+  font-weight: 600;
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+}
+
+.about-story__grid {
+  display: grid;
+  gap: var(--space-2xl);
+}
+
+.about-story h2 {
+  max-width: 12ch;
+  margin-top: var(--space-lg);
+}
+
+.about-story__body {
+  align-self: end;
+  color: var(--color-ink-soft);
+  font-size: var(--text-lg);
+}
+
+.about-images {
+  padding-bottom: var(--section-space);
+}
+
+.about-images__grid {
+  display: grid;
+  gap: var(--space-lg);
+}
+
+.about-images__large {
+  min-height: clamp(24rem, 52vw, 44rem);
+  place-items: end start;
+  padding: var(--space-lg);
+}
+
+.about-images__small {
+  min-height: clamp(16rem, 36vw, 28rem);
+  place-items: end start;
+  padding: var(--space-lg);
+  background:
+    linear-gradient(145deg, rgba(167, 98, 69, 0.2), rgba(28, 28, 25, 0.62)),
+    var(--color-clay);
+}
+
+.about-kitchen__intro {
+  display: grid;
+  gap: var(--space-2xl);
+}
+
+.about-kitchen h2 {
+  max-width: 10ch;
+}
+
+.about-kitchen__copy {
+  align-self: end;
+  max-width: 40rem;
+  color: var(--color-surface);
+  font-size: var(--text-lg);
+}
+
+.about-kitchen__statement {
+  color: var(--color-white-soft);
+  font-family: var(--font-display);
+  font-size: var(--text-h4);
+  line-height: var(--line-heading);
+}
+
+.about-principles {
+  display: grid;
+  gap: 0;
+  margin-top: var(--space-4xl);
+  border-top: 1px solid rgba(244, 240, 232, 0.22);
+}
+
+.about-principle {
+  padding-block: var(--space-xl);
+  border-bottom: 1px solid rgba(244, 240, 232, 0.22);
+}
+
+.about-principle__number {
+  margin-bottom: var(--space-lg);
+  color: var(--color-surface);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  letter-spacing: var(--tracking-label);
+}
+
+.about-principle h3 {
+  margin-bottom: var(--space-md);
+  font-size: var(--text-h4);
+}
+
+.about-principle p:last-child {
+  max-width: 28ch;
+  color: var(--color-surface);
+  font-size: var(--text-sm);
+}
+
+.about-chef__grid {
+  display: grid;
+  gap: var(--space-2xl);
+  align-items: center;
+}
+
+.about-chef__media {
+  min-height: clamp(28rem, 58vw, 46rem);
+  place-items: end start;
+  padding: var(--space-lg);
+  background:
+    linear-gradient(145deg, rgba(28, 28, 25, 0.16), rgba(28, 28, 25, 0.68)),
+    var(--color-ink-soft);
+}
+
+.about-chef__copy h2 {
+  max-width: 10ch;
+}
+
+.about-chef__identity {
+  padding-block: var(--space-lg);
+  border-block: var(--border-default);
+}
+
+.about-chef__name {
+  font-size: var(--text-base);
+  font-weight: 600;
+}
+
+.about-chef__role {
+  margin-top: var(--space-2xs);
+  color: var(--color-ink-soft);
+  font-size: var(--text-sm);
+}
+
+.about-chef__bio {
+  color: var(--color-ink-soft);
+}
+
+.about-closing {
+  padding-bottom: var(--section-space);
+}
+
+.about-closing__media {
+  min-height: clamp(28rem, 54vw, 44rem);
+  align-items: end;
+  padding: var(--space-xl);
+  background:
+    linear-gradient(90deg, rgba(28, 28, 25, 0.76), rgba(28, 28, 25, 0.16)),
+    var(--color-ink);
+}
+
+.about-closing__copy {
+  max-width: 42rem;
+}
+
+.about-closing__copy h2 {
+  margin-top: var(--space-lg);
+  max-width: 12ch;
+  font-size: var(--text-display);
+}
+
+.about-closing__copy > p:not(.eyebrow) {
+  margin-top: var(--space-lg);
+  color: var(--color-surface);
+  font-size: var(--text-lg);
+}
+
+.about-closing__link {
+  margin-top: var(--space-xl);
+  color: var(--color-white-soft);
+}
+
+@media (min-width: 48rem) {
+  .about-hero__grid {
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    gap: var(--space-4xl);
+  }
+
+  .about-story__grid {
+    grid-template-columns: minmax(0, 1fr) minmax(20rem, 0.8fr);
+    gap: var(--space-4xl);
+  }
+
+  .about-images__grid {
+    grid-template-columns: minmax(0, 1.65fr) minmax(14rem, 0.7fr);
+    align-items: end;
+  }
+
+  .about-images__small {
+    transform: translateY(var(--space-3xl));
+  }
+
+  .about-kitchen__intro {
+    grid-template-columns: minmax(0, 1fr) minmax(20rem, 0.9fr);
+    gap: var(--space-4xl);
+  }
+
+  .about-principles {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .about-principle {
+    min-height: 15rem;
+    padding: var(--space-xl);
+    border-right: 1px solid rgba(244, 240, 232, 0.22);
+  }
+
+  .about-principle:first-child {
+    padding-left: 0;
+  }
+
+  .about-principle:last-child {
+    padding-right: 0;
+    border-right: 0;
+  }
+
+  .about-chef__grid {
+    grid-template-columns: minmax(0, 1.08fr) minmax(18rem, 0.92fr);
+    gap: var(--space-4xl);
+  }
+
+  .about-closing__media {
+    padding: var(--space-3xl);
+  }
+}
+
+@media (min-width: 64rem) {
+  .about-hero__copy {
+    padding-bottom: var(--space-2xl);
+  }
+
+  .about-story__body {
+    padding-right: var(--space-xl);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .about-images__small {
+    transform: none;
+  }
+}

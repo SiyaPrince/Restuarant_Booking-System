@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Request a table at The Table in Rosebank, Johannesburg.">
+    <meta name="theme-color" content="#f4f0e8">
+    <title>Reservations | The Table</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/tokens.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/utilities.css">
+    <link rel="stylesheet" href="css/pages/reservations.css">
+  </head>
+
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <header class="site-header">
+      <div class="container site-header__inner">
+        <a class="site-header__brand" href="index.html" aria-label="The Table home">THE TABLE</a>
+
+        <nav class="site-nav" aria-label="Primary navigation">
+          <ul class="site-nav__list" role="list">
+            <li><a class="site-nav__link" href="menu.html">Menu</a></li>
+            <li><a class="site-nav__link" href="about.html">About</a></li>
+            <li><a class="site-nav__link" href="gallery.html">Gallery</a></li>
+            <li><a class="site-nav__link" href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="site-header__actions">
+          <a class="button button--primary" href="reservations.html" aria-current="page">Reserve</a>
+        </div>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <section class="reservations section">
+        <div class="container">
+          <div class="reservations__grid">
+            <div class="reservations__intro stack stack--lg">
+              <p class="eyebrow">Reservations</p>
+              <h1>Your table is waiting.</h1>
+              <p class="reservations__lead">
+                Choose your date, time and party size, and we'll take care of the rest.
+              </p>
+
+              <div class="reservations__location">
+                <p>Rosebank</p>
+                <p>Johannesburg</p>
+                <p>South Africa</p>
+              </div>
+            </div>
+
+            <form class="reservation-form" aria-describedby="reservation-status-note">
+              <fieldset class="reservation-form__group">
+                <legend>Your visit</legend>
+
+                <div class="form-field">
+                  <label for="reservation-date">Date</label>
+                  <input
+                    id="reservation-date"
+                    name="reservation_date"
+                    type="date"
+                    required
+                  >
+                </div>
+
+                <div class="reservation-form__row">
+                  <div class="form-field">
+                    <label for="reservation-time">Time</label>
+                    <select id="reservation-time" name="reservation_time" required>
+                      <option value="">Select a time</option>
+                      <option value="17:30">17:30</option>
+                      <option value="18:00">18:00</option>
+                      <option value="18:30">18:30</option>
+                      <option value="19:00">19:00</option>
+                      <option value="19:30">19:30</option>
+                      <option value="20:00">20:00</option>
+                      <option value="20:30">20:30</option>
+                      <option value="21:00">21:00</option>
+                    </select>
+                  </div>
+
+                  <div class="form-field">
+                    <label for="guest-count">Guests</label>
+                    <select id="guest-count" name="guest_count" required>
+                      <option value="">Select party size</option>
+                      <option value="1">1 guest</option>
+                      <option value="2">2 guests</option>
+                      <option value="3">3 guests</option>
+                      <option value="4">4 guests</option>
+                      <option value="5">5 guests</option>
+                      <option value="6">6 guests</option>
+                      <option value="7">7 guests</option>
+                      <option value="8">8 guests</option>
+                    </select>
+                  </div>
+                </div>
+              </fieldset>
+
+              <fieldset class="reservation-form__group">
+                <legend>Your details</legend>
+
+                <div class="form-field">
+                  <label for="full-name">Full name</label>
+                  <input
+                    id="full-name"
+                    name="full_name"
+                    type="text"
+                    autocomplete="name"
+                    required
+                  >
+                </div>
+
+                <div class="form-field">
+                  <label for="reservation-email">Email address</label>
+                  <input
+                    id="reservation-email"
+                    name="email"
+                    type="email"
+                    autocomplete="email"
+                    inputmode="email"
+                    required
+                  >
+                </div>
+
+                <div class="form-field">
+                  <label for="reservation-phone">Phone number</label>
+                  <input
+                    id="reservation-phone"
+                    name="phone"
+                    type="tel"
+                    autocomplete="tel"
+                    inputmode="tel"
+                    required
+                  >
+                </div>
+
+                <div class="form-field">
+                  <label for="special-requests">Special requests</label>
+                  <textarea
+                    id="special-requests"
+                    name="special_requests"
+                    rows="6"
+                    aria-describedby="special-requests-help"
+                  ></textarea>
+                  <p class="form-field__help" id="special-requests-help">
+                    Dietary requirements, accessibility needs or anything else we should know.
+                  </p>
+                </div>
+              </fieldset>
+
+              <p class="reservation-form__note" id="reservation-status-note">
+                Online booking is not yet active. For reservation enquiries, please
+                <a href="contact.html">contact the restaurant</a>.
+              </p>
+
+              <button class="button button--primary reservation-form__submit" type="button" disabled>
+                Request a Table
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <section class="reservation-notes section--compact" aria-labelledby="booking-notes-title">
+        <div class="container">
+          <div class="reservation-notes__intro">
+            <p class="eyebrow">Good to know</p>
+            <h2 id="booking-notes-title">Before you join us.</h2>
+          </div>
+
+          <div class="reservation-notes__grid">
+            <article class="reservation-note">
+              <p class="reservation-note__number">01</p>
+              <h3>Groups</h3>
+              <p>For groups larger than 8, please contact the restaurant directly.</p>
+            </article>
+
+            <article class="reservation-note">
+              <p class="reservation-note__number">02</p>
+              <h3>Dietary requirements</h3>
+              <p>Please include dietary or accessibility requirements with your request.</p>
+            </article>
+
+            <article class="reservation-note">
+              <p class="reservation-note__number">03</p>
+              <h3>Arrival</h3>
+              <p>Tables may be held for 15 minutes after the requested reservation time.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container site-footer__inner">
+        <div class="site-footer__grid">
+          <div class="site-footer__brand">
+            <a class="site-footer__wordmark" href="index.html">THE TABLE</a>
+            <p class="site-footer__tagline">Come together. Eat well.</p>
+          </div>
+
+          <div>
+            <p class="site-footer__heading">Explore</p>
+            <ul class="site-footer__list" role="list">
+              <li><a class="site-footer__link" href="menu.html">Menu</a></li>
+              <li><a class="site-footer__link" href="about.html">About</a></li>
+              <li><a class="site-footer__link" href="gallery.html">Gallery</a></li>
+              <li><a class="site-footer__link" href="contact.html">Contact</a></li>
+              <li><a class="site-footer__link" href="reservations.html">Reserve a Table</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <p class="site-footer__heading">Visit</p>
+            <address class="site-footer__text">
+              Rosebank<br>
+              Johannesburg<br>
+              South Africa
+            </address>
+          </div>
+
+          <div>
+            <p class="site-footer__heading">Contact</p>
+            <ul class="site-footer__list" role="list">
+              <li><a class="site-footer__link" href="mailto:hello@thetable.co.za">hello@thetable.co.za</a></li>
+              <li><span class="site-footer__text">Phone number to be confirmed</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="site-footer__legal">
+          <p>&copy; 2026 The Table. All rights reserved.</p>
+          <p>Rosebank · Johannesburg</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

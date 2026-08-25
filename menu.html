@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Explore the seasonal menu at The Table in Rosebank, Johannesburg.">
+    <meta name="theme-color" content="#f4f0e8">
+    <title>Menu | The Table</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/tokens.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/utilities.css">
+    <link rel="stylesheet" href="css/pages/menu.css">
+  </head>
+
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <header class="site-header">
+      <div class="container site-header__inner">
+        <a class="site-header__brand" href="index.html" aria-label="The Table home">THE TABLE</a>
+
+        <nav class="site-nav" aria-label="Primary navigation">
+          <ul class="site-nav__list" role="list">
+            <li><a class="site-nav__link" href="menu.html" aria-current="page">Menu</a></li>
+            <li><a class="site-nav__link" href="about.html">About</a></li>
+            <li><a class="site-nav__link" href="gallery.html">Gallery</a></li>
+            <li><a class="site-nav__link" href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="site-header__actions">
+          <a class="button button--primary" href="reservations.html">Reserve</a>
+        </div>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <section class="menu-intro section">
+        <div class="container">
+          <div class="menu-intro__grid">
+            <div class="stack stack--lg">
+              <p class="eyebrow">The Menu</p>
+              <h1>Food worth gathering around.</h1>
+            </div>
+
+            <div class="menu-intro__support stack stack--lg">
+              <p class="menu-intro__copy">
+                Our menu follows the seasons, bringing together South African ingredients,
+                familiar flavours and a contemporary approach to cooking.
+              </p>
+              <p class="menu-intro__season">Winter Menu · 2026</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <nav class="menu-categories" aria-label="Menu categories">
+        <div class="container">
+          <ul class="menu-categories__list" role="list">
+            <li><a href="#starters">Starters</a></li>
+            <li><a href="#mains">Mains</a></li>
+            <li><a href="#desserts">Desserts</a></li>
+            <li><a href="#drinks">Drinks</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <section class="menu-section section" id="starters" aria-labelledby="starters-title">
+        <div class="container">
+          <div class="menu-section__grid">
+            <div class="menu-section__heading">
+              <p class="menu-section__number">01</p>
+              <h2 id="starters-title">Starters</h2>
+            </div>
+
+            <div class="menu-list">
+              <article class="menu-item">
+                <div class="menu-item__header">
+                  <h3 class="menu-item__name">Cape Malay-Spiced Prawns</h3>
+                  <p class="menu-item__price">R165</p>
+                </div>
+                <p class="menu-item__description">Charred citrus · coriander · smoked chilli</p>
+              </article>
+
+              <article class="menu-item">
+                <div class="menu-item__header">
+                  <h3 class="menu-item__name">Charred Corn <span class="menu-item__dietary">V</span></h3>
+                  <p class="menu-item__price">R110</p>
+                </div>
+                <p class="menu-item__description">Smoked butter · lime · spring onion</p>
+              </article>
+
+              <article class="menu-item">
+                <div class="menu-item__header">
+                  <h3 class="menu-item__name">Beef Tartare</h3>
+                  <p class="menu-item__price">R175</p>
+                </div>
+                <p class="menu-item__description">Cured egg yolk · mustard seed · sourdough</p>
+              </article>
+
+              <article class="menu-item">
+                <div class="menu-item__header">
+                  <h3 class="menu-item__name">Roasted Beetroot <span class="menu-item__dietary">V</span></h3>
+                  <p class="menu-item__price">R125</p>
+                </div>
+                <p class="menu-item__description">Goat's cheese · walnut · buchu</p>
+              </article>
+
+              <article class="menu-item">
+                <div class="menu-item__header">
+                  <h3 class="menu-item__name">Line Fish Crudo</h3>
+                  <p class="menu-item__price">R160</p>
+                </div>
+                <p class="menu-item__description">Citrus · chilli · cucumber · herbs</p>
+              </article>
+
+              <article class="menu-item">
+                <div class="menu-item__header">
+                  <h3 class="menu-item__name">Wild Mushroom Toast <span class="menu-item__dietary">V</span></h3>
+                  <p class="menu-item__price">R135</p>
+                </div>
+                <p class="menu-item__description">Cultured cream · thyme · sourdough</p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="menu-media" aria-label="Seasonal dish visual placeholder">
+        <div class="container--wide">
+          <div class="menu-media__surface" aria-hidden="true">
+            <span>Seasonal dish photography</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="menu-section section" id="mains" aria-labelledby="mains-title">
+        <div class="container">
+          <div class="menu-section__grid">
+            <div class="menu-section__heading">
+              <p class="menu-section__number">02</p>
+              <h2 id="mains-title">Mains</h2>
+            </div>
+
+            <div class="menu-list">
+              <article class="menu-item">
+                <div class="menu-item__header">
+                  <h3 class="menu-item__name">Karoo Springbok Loin</h3>
+                  <p class="menu-item__price">R320</p>
+                </div>
+                <p class="menu-item__description">Roasted beetroot · fermented plum · rosemary jus</p>
+              </article>
+
+              <article class="menu-item">
+                <div class="menu-item__header">
+                  <h3 class="menu-item__name">Braised Beef Short Rib</h3>
+                  <p class="menu-item__price">R295</p>
+                </div>
+                <p class="menu-item__description">Smoked potato · onion · red wine jus</p>
+              </article>
+
+              <article class="menu-item">
+                <div class="menu-item__header">
+                  <h3 class="menu-item__name">Market Line Fish</h3>
+                  <p class="menu-item__price">R285</p>
+                </div>
+                <p class="menu-item__description">Seasonal greens · mussel broth · lemon</p>
+              </article>
+
+              <article class="menu-item">
+                <div class="menu-item__header">
+                  <h3 class="menu-item__name">Free-Range Chicken</h3>
+                  <p class="menu-item__price">R245</p>
+                </div>
+                <p class="menu-item__description">Charred leek · sweetcorn · herb jus</p>
+              </article>
+
+              <article class="menu-item">
+                <div class="menu-item__header">
+                  <h3 class="menu-item__name">Wild Mushroom Risotto <span class="menu-item__dietary">V</span></h3>
+                  <p class="menu-item__price">R210</p>
+                </div>
+                <p class="menu-item__description">Aged hard cheese · herbs · truffle</p>
+              </article>
+
+              <article class="menu-item">
+                <div class="menu-item__header">
+                  <h3 class="menu-item__name">Fire-Roasted Cauliflower <span class="menu-item__dietary">VG</span></h3>
+                  <p class="menu-item__price">R195</p>
+                </div>
+                <p class="menu-item__description">Chickpea · tahini · preserved lemon</p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="menu-section menu-section--surface section" id="desserts" aria-labelledby="desserts-title">
+        <div class="container">
+          <div class="menu-section__grid">
+            <div class="menu-section__heading">
+              <p class="menu-section__number">03</p>
+              <h2 id="desserts-title">Desserts</h2>
+            </div>
+
+            <div class="menu-list">
+              <article class="menu-item">
+                <div class="menu-item__header">
+                  <h3 class="menu-item__name">Rooibos-Poached Pear <span class="menu-item__dietary">V</span></h3>
+                  <p class="menu-item__price">R115</p>
+                </div>
+                <p class="menu-item__description">Cultured cream · honeycomb · toasted almond</p>
+              </article>
+
+              <article class="menu-item">
+                <div class="menu-item__header">
+                  <h3 class="menu-item__name">Warm Malva <span class="menu-item__dietary">V</span></h3>
+                  <p class="menu-item__price">R120</p>
+                </div>
+                <p class="menu-item__description">Brown butter · vanilla · apricot</p>
+              </article>
+
+              <article class="menu-item">
+                <div class="menu-item__header">
+                  <h3 class="menu-item__name">Dark Chocolate <span class="menu-item__dietary">V</span></h3>
+                  <p class="menu-item__price">R135</p>
+                </div>
+                <p class="menu-item__description">Coffee · cocoa nib · salted caramel</p>
+              </article>
+
+              <article class="menu-item">
+                <div class="menu-item__header">
+                  <h3 class="menu-item__name">Cape Citrus <span class="menu-item__dietary">V</span></h3>
+                  <p class="menu-item__price">R110</p>
+                </div>
+                <p class="menu-item__description">Lemon curd · meringue · yoghurt</p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="menu-media menu-media--compact" aria-label="Kitchen visual placeholder">
+        <div class="container">
+          <div class="menu-media__surface menu-media__surface--dark" aria-hidden="true">
+            <span>Kitchen and service photography</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="menu-section section" id="drinks" aria-labelledby="drinks-title">
+        <div class="container">
+          <div class="menu-section__grid">
+            <div class="menu-section__heading">
+              <p class="menu-section__number">04</p>
+              <h2 id="drinks-title">Drinks</h2>
+            </div>
+
+            <div class="menu-list menu-list--drinks">
+              <div class="drink-group">
+                <h3 class="drink-group__title">Signature Cocktails</h3>
+
+                <article class="menu-item">
+                  <div class="menu-item__header">
+                    <h4 class="menu-item__name">Highveld Sunset</h4>
+                    <p class="menu-item__price">R145</p>
+                  </div>
+                  <p class="menu-item__description">Citrus · rooibos · dry vermouth · sparkling wine</p>
+                </article>
+
+                <article class="menu-item">
+                  <div class="menu-item__header">
+                    <h4 class="menu-item__name">Buchu Collins</h4>
+                    <p class="menu-item__price">R135</p>
+                  </div>
+                  <p class="menu-item__description">Gin · buchu · lemon · soda</p>
+                </article>
+
+                <article class="menu-item">
+                  <div class="menu-item__header">
+                    <h4 class="menu-item__name">Smoked Fig Old Fashioned</h4>
+                    <p class="menu-item__price">R155</p>
+                  </div>
+                  <p class="menu-item__description">Whisky · fig · bitters</p>
+                </article>
+              </div>
+
+              <div class="drink-group">
+                <h3 class="drink-group__title">Wine by the Glass</h3>
+
+                <article class="menu-item">
+                  <div class="menu-item__header">
+                    <h4 class="menu-item__name">Chenin Blanc</h4>
+                    <p class="menu-item__price">R105</p>
+                  </div>
+                  <p class="menu-item__description">Western Cape · dry · mineral</p>
+                </article>
+
+                <article class="menu-item">
+                  <div class="menu-item__header">
+                    <h4 class="menu-item__name">Pinotage</h4>
+                    <p class="menu-item__price">R125</p>
+                  </div>
+                  <p class="menu-item__description">Stellenbosch · red fruit · spice</p>
+                </article>
+
+                <article class="menu-item">
+                  <div class="menu-item__header">
+                    <h4 class="menu-item__name">Méthode Cap Classique</h4>
+                    <p class="menu-item__price">R140</p>
+                  </div>
+                  <p class="menu-item__description">Western Cape · crisp · fine bubbles</p>
+                </article>
+              </div>
+
+              <div class="drink-group">
+                <h3 class="drink-group__title">Non-Alcoholic</h3>
+
+                <article class="menu-item">
+                  <div class="menu-item__header">
+                    <h4 class="menu-item__name">Rooibos &amp; Citrus Cooler</h4>
+                    <p class="menu-item__price">R75</p>
+                  </div>
+                  <p class="menu-item__description">Rooibos · grapefruit · tonic</p>
+                </article>
+
+                <article class="menu-item">
+                  <div class="menu-item__header">
+                    <h4 class="menu-item__name">Garden Spritz</h4>
+                    <p class="menu-item__price">R80</p>
+                  </div>
+                  <p class="menu-item__description">Cucumber · mint · lime · soda</p>
+                </article>
+
+                <article class="menu-item">
+                  <div class="menu-item__header">
+                    <h4 class="menu-item__name">Sparkling Apple &amp; Buchu</h4>
+                    <p class="menu-item__price">R78</p>
+                  </div>
+                  <p class="menu-item__description">Apple · buchu · sparkling water</p>
+                </article>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-legend" aria-label="Dietary key">
+            <p><strong>V</strong> Vegetarian</p>
+            <p><strong>VG</strong> Vegan</p>
+            <p class="menu-legend__note">Please tell us about dietary requirements when making a reservation.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="menu-cta section--dark section--compact">
+        <div class="container--reading text-center">
+          <div class="stack stack--lg">
+            <p class="eyebrow">Found something you like?</p>
+            <h2>Save room for the rest.</h2>
+            <div>
+              <a class="button button--primary menu-cta__button" href="reservations.html">Reserve a Table</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container site-footer__inner">
+        <div class="site-footer__grid">
+          <div class="site-footer__brand">
+            <a class="site-footer__wordmark" href="index.html">THE TABLE</a>
+            <p class="site-footer__tagline">Come together. Eat well.</p>
+          </div>
+
+          <div>
+            <p class="site-footer__heading">Explore</p>
+            <ul class="site-footer__list" role="list">
+              <li><a class="site-footer__link" href="menu.html">Menu</a></li>
+              <li><a class="site-footer__link" href="about.html">About</a></li>
+              <li><a class="site-footer__link" href="gallery.html">Gallery</a></li>
+              <li><a class="site-footer__link" href="contact.html">Contact</a></li>
+              <li><a class="site-footer__link" href="reservations.html">Reserve a Table</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <p class="site-footer__heading">Visit</p>
+            <address class="site-footer__text">
+              Rosebank<br>
+              Johannesburg<br>
+              South Africa
+            </address>
+          </div>
+
+          <div>
+            <p class="site-footer__heading">Contact</p>
+            <ul class="site-footer__list" role="list">
+              <li><a class="site-footer__link" href="mailto:hello@thetable.co.za">hello@thetable.co.za</a></li>
+              <li><span class="site-footer__text">Phone number to be confirmed</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="site-footer__legal">
+          <p>&copy; 2026 The Table. All rights reserved.</p>
+          <p>Rosebank · Johannesburg</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

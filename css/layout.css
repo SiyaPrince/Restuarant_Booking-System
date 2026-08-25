@@ -1,0 +1,81 @@
+/* ==========================================================================
+   Layout
+   Shared structural primitives only.
+   ========================================================================== */
+
+.container,
+.container--wide,
+.container--reading {
+  width: min(100% - (2 * var(--page-gutter)), var(--container-standard));
+  margin-inline: auto;
+}
+
+.container--wide {
+  width: min(100% - (2 * var(--page-gutter)), var(--container-wide));
+}
+
+.container--reading {
+  width: min(100% - (2 * var(--page-gutter)), var(--container-reading));
+}
+
+.section {
+  padding-block: var(--section-space);
+}
+
+.section--compact {
+  padding-block: clamp(3rem, 2.2rem + 2.5vw, 6rem);
+}
+
+.section--dark {
+  color: var(--color-white-soft);
+  background: var(--color-ink);
+}
+
+.section--olive {
+  color: var(--color-white-soft);
+  background: var(--color-brand);
+}
+
+.stack {
+  display: flex;
+  flex-direction: column;
+}
+
+.stack--sm {
+  gap: var(--space-sm);
+}
+
+.stack--md {
+  gap: var(--space-md);
+}
+
+.stack--lg {
+  gap: var(--space-lg);
+}
+
+.stack--xl {
+  gap: var(--space-xl);
+}
+
+.cluster {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.split {
+  display: grid;
+  gap: var(--space-2xl);
+}
+
+.page-shell {
+  min-height: 50vh;
+}
+
+@media (min-width: 48rem) {
+  .split {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--space-3xl);
+  }
+}
