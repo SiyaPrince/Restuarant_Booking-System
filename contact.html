@@ -23,7 +23,7 @@
   <body>
     <a class="skip-link" href="#main-content">Skip to main content</a>
 
-    <header class="site-header">
+    <header class="site-header" data-site-header>
       <div class="container site-header__inner">
         <a class="site-header__brand" href="index.html" aria-label="The Table home">THE TABLE</a>
 
@@ -40,8 +40,8 @@
           <a class="button button--primary" href="reservations.html">Reserve</a>
         </div>
 
-        <details class="mobile-nav">
-          <summary class="mobile-nav__toggle" aria-label="Open site menu">
+        <details class="mobile-nav" data-mobile-nav>
+          <summary class="mobile-nav__toggle" data-mobile-nav-toggle aria-label="Open site menu" aria-expanded="false" aria-controls="mobile-navigation-panel">
             <span class="mobile-nav__toggle-label mobile-nav__toggle-label--menu">Menu</span>
             <span class="mobile-nav__toggle-label mobile-nav__toggle-label--close">Close</span>
             <span class="mobile-nav__icon" aria-hidden="true">
@@ -50,7 +50,7 @@
             </span>
           </summary>
 
-          <div class="mobile-nav__panel">
+          <div class="mobile-nav__panel" id="mobile-navigation-panel" data-mobile-nav-panel aria-hidden="true">
             <div class="mobile-nav__panel-inner">
               <a class="mobile-nav__brand" href="index.html">THE TABLE</a>
 
@@ -128,7 +128,6 @@
               <section class="contact-detail" aria-labelledby="talk-heading">
                 <p class="contact-detail__label" id="talk-heading">Talk to us</p>
                 <p><a href="mailto:hello@thetable.co.za">hello@thetable.co.za</a></p>
-                <p>Phone number to be confirmed</p>
               </section>
 
               <section class="contact-detail contact-detail--hours" aria-labelledby="hours-heading">
@@ -179,7 +178,7 @@
               </p>
             </div>
 
-            <form class="contact-form" aria-describedby="contact-status-note">
+            <form class="contact-form" aria-describedby="contact-status-note" data-contact-form>
               <div class="form-field">
                 <label for="contact-name">Name</label>
                 <input
@@ -224,9 +223,10 @@
               </div>
 
               <p class="contact-form__note" id="contact-status-note">
-                Online enquiries are not yet active. Please email
-                <a href="mailto:hello@thetable.co.za">hello@thetable.co.za</a> directly.
+                Online messages are not yet available. You can reach us directly at hello@thetable.co.za.
               </p>
+
+              <div class="form-status" id="contact-form-status" data-form-status role="status" aria-live="polite" hidden></div>
 
               <button class="button button--primary contact-form__submit" type="button" disabled>
                 Send Message
@@ -269,7 +269,6 @@
             <p class="site-footer__heading">Contact</p>
             <ul class="site-footer__list" role="list">
               <li><a class="site-footer__link" href="mailto:hello@thetable.co.za">hello@thetable.co.za</a></li>
-              <li><span class="site-footer__text">Phone number to be confirmed</span></li>
             </ul>
           </div>
         </div>
@@ -280,5 +279,6 @@
         </div>
       </div>
     </footer>
+    <script type="module" src="js/main.js"></script>
   </body>
 </html>
