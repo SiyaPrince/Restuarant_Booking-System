@@ -1,101 +1,86 @@
-# The Table — Current State
+# The Table — Current Project State
 
-## Current Iteration
+## Current Status
 
-**Version 1.9 — Static HTML/CSS acceptance candidate**
+**Version 2 — LOCKED / ACCEPTED**
 
-## Implemented
+Version 2 is the authoritative interactive frontend baseline for The Table.
 
-### Shared Foundation
+This lock follows:
 
-- Six-page semantic HTML5 structure.
-- Shared primary navigation and footer.
-- Skip-to-content accessibility foundation.
-- Global design tokens.
-- Cormorant Garamond / Inter typography system.
-- Mobile-first layout primitives.
-- Shared buttons, links, form controls, header and footer styles.
-- Reduced-motion handling.
-- Responsive page-specific CSS.
+- static/code acceptance
+- cross-page JavaScript/accessibility review
+- real browser visual QA
+- accepted visual repairs for:
+  - Reservations form
+  - Contact form
+  - About principles layout
+  - Gallery mobile gutters
 
-### Home
+## Implemented Pages
 
-- Cinematic hero composition.
-- Restaurant identity and primary CTAs.
-- Short restaurant introduction.
-- Three-item featured menu teaser.
-- Atmosphere / Gallery teaser.
-- Compact reservation CTA.
-- Essential visit information.
+- Home
+- Menu
+- About
+- Gallery
+- Reservations
+- Contact
 
-### Menu
+## Implemented Interaction Layer
 
-- Seasonal menu introduction.
-- Anchor-based category navigation.
-- Starters, Mains, Desserts and Drinks.
-- Dietary key.
-- Editorial visual breaks.
-- Compact reservation CTA.
+- Mobile full-screen navigation enhancement.
+- Escape handling, focus trapping/restoration and background scroll lock.
+- Sticky/scrolled shared header.
+- Shared accessible form-validation utilities.
+- Reservation-form client-side validation.
+- Contact-form client-side validation.
+- Accessible Gallery lightbox using native `<dialog>`.
+- Menu category tracking using `IntersectionObserver`.
+- Restrained reveal motion with reduced-motion support.
+
+## Progressive Enhancement
+
+- Navigation retains a native HTML fallback.
+- Menu category anchors work without JavaScript.
+- Page content remains available without reveal JavaScript.
+- Forms remain semantic.
+- Gallery content remains visible without the lightbox.
+
+## Accepted Visual Repairs
+
+### Reservations + Contact
+- Restored premium control styling.
+- Corrected malformed reveal markup.
+- Restored balanced field composition.
+- Preserved validation hooks and enabled submit controls.
 
 ### About
-
-- Restaurant introduction and story.
-- Editorial image composition.
-- Deep Olive kitchen-philosophy section.
-- Seasonal / Rooted / Considered principles.
-- Executive chef section.
-- Closing location link.
+- Corrected malformed reveal markup.
+- Restored Seasonal / Rooted / Considered as a balanced principles system.
 
 ### Gallery
+- Corrected mobile gutter containment.
+- Preserved equal left/right spacing.
+- Preserved the Gallery lightbox and 12-item structure.
 
-- Concise gallery introduction.
-- 12-item editorial grid.
-- Controlled image aspect-ratio system.
-- Responsive mobile/tablet/desktop grid rules.
-- Compact reservation CTA.
+## Deferred Beyond Version 2
 
-### Reservations
+- Final restaurant photography.
+- Final fictional street address and telephone number.
+- Backend reservation submission and persistence.
+- Contact message delivery.
+- Authentication.
+- Database.
+- React / TypeScript migration.
 
-- Semantic reservation-request form.
-- Date, time and guest fields.
-- Full name, email, phone and special requests.
-- Booking guidance section.
-- Static action intentionally disabled until real submission functionality exists.
+## Lock Rule
 
-### Contact
+Version 2 should no longer be altered as ordinary feature development.
 
-- Visit information.
-- Email contact.
-- Full weekly opening hours.
-- Pre-publication directions section.
-- General enquiry form.
-- Static action intentionally disabled until real message delivery exists.
+Any future correction to this baseline should be explicit, documented, and verified.
 
-## Version 1 Boundaries Preserved
+## Next Stage
 
-- No JavaScript.
-- No package-manager dependencies.
-- No CSS framework.
-- No backend.
-- No database.
-- No authentication.
-- No fake successful reservation or message submission.
+**Version 3 — React migration planning**
 
-## Open Acceptance Items
-
-1. Final restaurant photography is not installed.
-2. Exact fictional street address is not finalised.
-3. Telephone number is not finalised.
-4. Real-browser visual QA remains required at desktop, tablet and mobile widths.
-5. Any issues found during browser QA must be repaired before Version 1 is tagged complete.
-
-## Verification State
-
-- Cross-page static verification v1.8: passed.
-- Expanded static acceptance verification v1.9: see `verification_results_v1_9.md`.
-- Browser rendering in the current automation environment: blocked by the environment and therefore not counted as evidence.
-- Local human/browser verification: not yet recorded.
-
-## Next Bounded Task
-
-Perform real-browser Version 1 visual QA and integrate final content assets. Do not start Version 2 JavaScript before the Version 1 acceptance gate is closed.
+The React phase must migrate the accepted product rather than redesign it.
