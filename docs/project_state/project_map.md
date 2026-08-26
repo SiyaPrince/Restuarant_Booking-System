@@ -1,13 +1,14 @@
 # The Table — Project Map
 
 ```text
-the_table_v1_foundation/
+The Table/
 ├── index.html
 ├── menu.html
 ├── about.html
 ├── gallery.html
 ├── reservations.html
 ├── contact.html
+├── .gitignore
 ├── css/
 │   ├── reset.css
 │   ├── tokens.css
@@ -33,19 +34,30 @@ the_table_v1_foundation/
 │   └── fonts/
 ├── favicon/
 ├── docs/
+│   ├── planning documents
 │   └── project_state/
-│       ├── 01_specification.md
-│       ├── 02_file_plan.md
-│       ├── 03_implementation_plan_v1_1.md
-│       ├── 04_test_verify_v1_1.md
+│       ├── specification and file plan
+│       ├── implementation history
 │       ├── current_state.md
-│       └── project_map.md
+│       ├── project_map.md
+│       └── verification records
 ├── README.md
 └── LICENSE
 ```
 
+## Structural Responsibilities
+
+- Root HTML files own page structure and content.
+- `css/tokens.css` owns approved design constants.
+- `css/base.css` owns global element defaults.
+- `css/layout.css` owns reusable layout primitives.
+- `css/components.css` owns shared UI components.
+- `css/pages/*.css` owns page-specific composition only.
+- `assets/images/<page>/` owns page-specific photography when final assets are introduced.
+- `docs/project_state/` records the actual continuation state and verification evidence.
+
 ## Where to Work Next
 
-The next bounded implementation target is `index.html` plus `css/pages/home.css`.
+The next bounded Version 1 task is **real-browser visual QA and final content-asset integration**.
 
-Shared global files should be extended only when the new requirement is genuinely cross-page.
+Do not begin Version 2 JavaScript until Version 1 browser QA has been completed and any discovered layout/accessibility issues have been repaired.

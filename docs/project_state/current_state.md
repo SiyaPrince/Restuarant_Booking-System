@@ -2,117 +2,113 @@
 
 ## Current Iteration
 
-Version 1.2 — Home page implementation.
+**Version 1.9 — Static HTML/CSS acceptance candidate**
 
 ## Implemented
 
-- Contact page v1.7:
-  - visit details
-  - telephone and email links
-  - complete opening-hours schedule
-  - directions/map placeholder section
-  - general enquiry form
-  - explicit Version 1 non-sending notice
-  - mobile-first responsive contact layout
-
-- Reservations page v1.6:
-  - reservation introduction
-  - semantic single-page form
-  - date, time and guest selection
-  - full name, email and phone fields
-  - special requests field
-  - honest Version 1 non-confirmation note
-  - booking guidance section
-  - mobile-first responsive form layout
-
-- Gallery page v1.5:
-  - concise gallery introduction
-  - 12-item editorial visual grid
-  - controlled 4:5, 1:1, 3:2 and 16:9 aspect ratios
-  - restrained optional captions
-  - responsive mobile/tablet/desktop composition
-  - compact reservation CTA
-
-- About page v1.4:
-  - editorial introduction
-  - restaurant story
-  - paired story imagery placeholders
-  - Deep Olive kitchen philosophy section
-  - Seasonal / Rooted / Considered principles
-  - executive chef section
-  - closing Rosebank link
-
-- Menu page v1.3:
-  - seasonal menu introduction
-  - anchor category navigation
-  - Starters, Mains, Desserts and Drinks
-  - restrained dietary key
-  - editorial media placeholders
-  - compact reservation CTA
-
 ### Shared Foundation
-- Static six-page HTML structure.
-- Shared navigation and footer.
-- Skip-link accessibility foundation.
+
+- Six-page semantic HTML5 structure.
+- Shared primary navigation and footer.
+- Skip-to-content accessibility foundation.
 - Global design tokens.
-- Typography system.
-- Base styles.
-- Layout primitives.
-- Shared interface component styles.
+- Cormorant Garamond / Inter typography system.
+- Mobile-first layout primitives.
+- Shared buttons, links, form controls, header and footer styles.
+- Reduced-motion handling.
+- Responsive page-specific CSS.
 
 ### Home
+
 - Cinematic hero composition.
 - Restaurant identity and primary CTAs.
-- Short introduction.
+- Short restaurant introduction.
 - Three-item featured menu teaser.
 - Atmosphere / Gallery teaser.
 - Compact reservation CTA.
 - Essential visit information.
-- Responsive mobile/tablet/desktop compositions.
-- Temporary editorial media surfaces for unsupplied photography.
 
-## Not Yet Implemented
+### Menu
 
-- Final Home photography assets.
-- Menu page.
-- About page.
-- Gallery page.
-- JavaScript interactions.
-- Backend functionality.
+- Seasonal menu introduction.
+- Anchor-based category navigation.
+- Starters, Mains, Desserts and Drinks.
+- Dietary key.
+- Editorial visual breaks.
+- Compact reservation CTA.
 
-## Dependencies
+### About
 
-- Google Fonts: Cormorant Garamond and Inter.
+- Restaurant introduction and story.
+- Editorial image composition.
+- Deep Olive kitchen-philosophy section.
+- Seasonal / Rooted / Considered principles.
+- Executive chef section.
+- Closing location link.
+
+### Gallery
+
+- Concise gallery introduction.
+- 12-item editorial grid.
+- Controlled image aspect-ratio system.
+- Responsive mobile/tablet/desktop grid rules.
+- Compact reservation CTA.
+
+### Reservations
+
+- Semantic reservation-request form.
+- Date, time and guest fields.
+- Full name, email, phone and special requests.
+- Booking guidance section.
+- Static action intentionally disabled until real submission functionality exists.
+
+### Contact
+
+- Visit information.
+- Email contact.
+- Full weekly opening hours.
+- Pre-publication directions section.
+- General enquiry form.
+- Static action intentionally disabled until real message delivery exists.
+
+## Version 1 Boundaries Preserved
+
+- No JavaScript.
 - No package-manager dependencies.
-- No JavaScript dependencies.
 - No CSS framework.
+- No backend.
+- No database.
+- No authentication.
+- No fake successful reservation or message submission.
 
-## Known Limits
+## Open Acceptance Items
 
-- Final photographic art direction cannot be verified until actual images are introduced.
-- Real browser visual/interaction review remains required.
-- Exact restaurant phone number and fictional street address remain unresolved working content.
+1. Final restaurant photography is not installed.
+2. Exact fictional street address is not finalised.
+3. Telephone number is not finalised.
+4. Real-browser visual QA remains required at desktop, tablet and mobile widths.
+5. Any issues found during browser QA must be repaired before Version 1 is tagged complete.
 
-## Latest Iteration
+## Verification State
 
-Version 1.3 implements the Menu page only. About, Gallery, Reservations and Contact remain deferred.
+- Cross-page static verification v1.8: passed.
+- Expanded static acceptance verification v1.9: see `verification_results_v1_9.md`.
+- Browser rendering in the current automation environment: blocked by the environment and therefore not counted as evidence.
+- Local human/browser verification: not yet recorded.
 
-## Latest Iteration
+## Next Bounded Task
 
-Version 1.4 implements the About page only. Gallery, Reservations and Contact remain deferred.
+Perform real-browser Version 1 visual QA and integrate final content assets. Do not start Version 2 JavaScript before the Version 1 acceptance gate is closed.
 
-## Latest Iteration
+## Mobile QA Repair — v1.10
 
-Version 1.5 implements the Gallery page only. Reservations and Contact remain deferred.
+The first real mobile visual QA identified two cross-page defects:
 
-## Latest Iteration
+- horizontal page overflow exposing the canvas beside dark sections/footer
+- missing approved hamburger/mobile navigation treatment
 
-Version 1.6 implements the Reservations page only. Contact remains deferred.
+v1.10 repairs both while preserving the Version 1 no-JavaScript constraint by using the native HTML `details`/`summary` disclosure pattern for mobile navigation.
 
-## Latest Iteration
+The mobile navigation is now a full-screen dark overlay with Home, Menu, About, Gallery, Contact and Reserve actions. Desktop navigation remains unchanged above the tablet breakpoint.
 
-Version 1.7 implements the Contact page. All six primary Version 1 pages now have page-specific implementations.
-
-## Cross-Page Review v1.8
-
-All six Version 1 pages have been reviewed together. Shared form styles are centralised, static forms cannot submit, user-facing placeholder copy has been cleaned up, and cross-page contact information is consistent. Final photography, exact street address and telephone number remain open content items.
+Container sizing and shared overflow behavior were also hardened across the site.

@@ -4,21 +4,9 @@ A frontend-first restaurant website project for a fictional contemporary South A
 
 ## Current Version
 
-**Version 1 — Static Frontend Foundation**
+**Version 1 — Static HTML/CSS Acceptance Candidate (v1.9)**
 
-Current scope:
-
-- HTML5
-- CSS3
-- Semantic multi-page structure
-- Responsive layout foundation
-- Accessibility foundation
-- Shared design system
-- Shared header and footer
-
-Page-specific visual implementation begins after the foundation is verified.
-
-## Pages
+All six primary pages are implemented:
 
 - Home
 - Menu
@@ -26,6 +14,24 @@ Page-specific visual implementation begins after the foundation is verified.
 - Gallery
 - Reservations
 - Contact
+
+Version 1 currently demonstrates:
+
+- Semantic multi-page HTML5 structure.
+- Mobile-first responsive CSS.
+- Shared design tokens and reusable component styles.
+- Accessible navigation and form foundations.
+- Editorial restaurant layouts across six distinct page responsibilities.
+- Static reservation and contact interfaces that do not pretend backend functionality exists.
+- No JavaScript, package-manager dependency, CSS framework, backend or database.
+
+### Remaining Version 1 acceptance items
+
+- Replace temporary editorial media surfaces with final restaurant photography.
+- Finalise the fictional street address.
+- Finalise the restaurant telephone number.
+- Complete real-browser visual QA at desktop, tablet and mobile widths.
+- Repair any issues discovered during that rendered review before tagging Version 1 complete.
 
 ## Design Direction
 
@@ -45,9 +51,7 @@ The visual system uses:
 
 No build step is required.
 
-You may open `index.html` directly, or serve the folder with any simple static HTTP server.
-
-Example with Python:
+From the project directory:
 
 ```bash
 python -m http.server 8000
@@ -59,9 +63,11 @@ Then visit:
 http://localhost:8000
 ```
 
+You may also open the HTML files directly, although a local HTTP server is preferred for realistic browser testing.
+
 ## Project State
 
-Continuation notes are maintained in:
+Continuation and verification notes are maintained in:
 
 `docs/project_state/`
 
@@ -69,15 +75,16 @@ Start with:
 
 - `current_state.md`
 - `project_map.md`
+- `verification_results_v1_9.md`
 
 ## Version Roadmap
 
-1. Static HTML/CSS
-2. JavaScript interaction
-3. React
-4. TypeScript
-5. Next.js
-6. Full-stack reservations and management
-7. Production engineering
+1. Static HTML/CSS — current acceptance candidate.
+2. JavaScript interaction.
+3. React.
+4. TypeScript.
+5. Next.js.
+6. Full-stack reservations and management.
+7. Production engineering.
 
 The product design should evolve rather than being repeatedly rebuilt.

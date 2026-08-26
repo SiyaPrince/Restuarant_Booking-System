@@ -27,7 +27,7 @@
       <div class="container site-header__inner">
         <a class="site-header__brand" href="index.html" aria-label="The Table home">THE TABLE</a>
 
-        <nav class="site-nav" aria-label="Primary navigation">
+        <nav class="site-nav site-nav--desktop" aria-label="Primary navigation">
           <ul class="site-nav__list" role="list">
             <li><a class="site-nav__link" href="menu.html">Menu</a></li>
             <li><a class="site-nav__link" href="about.html">About</a></li>
@@ -36,9 +36,68 @@
           </ul>
         </nav>
 
-        <div class="site-header__actions">
+        <div class="site-header__actions site-header__actions--desktop">
           <a class="button button--primary" href="reservations.html">Reserve</a>
         </div>
+
+        <details class="mobile-nav">
+          <summary class="mobile-nav__toggle" aria-label="Open site menu">
+            <span class="mobile-nav__toggle-label mobile-nav__toggle-label--menu">Menu</span>
+            <span class="mobile-nav__toggle-label mobile-nav__toggle-label--close">Close</span>
+            <span class="mobile-nav__icon" aria-hidden="true">
+              <span></span>
+              <span></span>
+            </span>
+          </summary>
+
+          <div class="mobile-nav__panel">
+            <div class="mobile-nav__panel-inner">
+              <a class="mobile-nav__brand" href="index.html">THE TABLE</a>
+
+              <nav aria-label="Mobile navigation">
+                <ul class="mobile-nav__list" role="list">
+              <li>
+                <a class="mobile-nav__link" href="index.html">
+                  <span class="mobile-nav__number">01</span>
+                  <span>Home</span>
+                </a>
+              </li>
+              <li>
+                <a class="mobile-nav__link" href="menu.html">
+                  <span class="mobile-nav__number">02</span>
+                  <span>Menu</span>
+                </a>
+              </li>
+              <li>
+                <a class="mobile-nav__link" href="about.html">
+                  <span class="mobile-nav__number">03</span>
+                  <span>About</span>
+                </a>
+              </li>
+              <li>
+                <a class="mobile-nav__link" href="gallery.html" aria-current="page">
+                  <span class="mobile-nav__number">04</span>
+                  <span>Gallery</span>
+                </a>
+              </li>
+              <li>
+                <a class="mobile-nav__link" href="contact.html">
+                  <span class="mobile-nav__number">05</span>
+                  <span>Contact</span>
+                </a>
+              </li>
+                </ul>
+              </nav>
+
+              <a class="button mobile-nav__reserve" href="reservations.html">Reserve a Table</a>
+
+              <div class="mobile-nav__meta">
+                <p>Rosebank · Johannesburg</p>
+                <a href="mailto:hello@thetable.co.za">hello@thetable.co.za</a>
+              </div>
+            </div>
+          </div>
+        </details>
       </div>
     </header>
 

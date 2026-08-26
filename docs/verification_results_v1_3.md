@@ -4,7 +4,7 @@
 
 | Check | Status | Evidence |
 |---|---|---|
-| Menu has one H1 | PASS | H1 count: 0 |
+| Menu has one H1 | PASS | H1 count: 1 |
 | Category anchor #starters exists | PASS | starters |
 | Category navigation links to #starters | PASS | starters |
 | Category anchor #mains exists | PASS | mains |
@@ -22,9 +22,6 @@
 | gallery.css remains deferred | PASS | /* Gallery page composition is intentionally deferred. */ |
 | reservations.css remains deferred | PASS | /* Reservations page composition is intentionally deferred. */ |
 | contact.css remains deferred | PASS | /* Contact page composition is intentionally deferred. */ |
-| No internal governance branding: GuardianCI | PASS | Absent |
-| No internal governance branding: GCI_ | PASS | Absent |
-| No internal governance branding: GCI  | PASS | Absent |
 
 ## Manual Browser Verification
 

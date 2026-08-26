@@ -4,12 +4,20 @@
    ========================================================================== */
 
 html {
+  width: 100%;
+  max-width: 100%;
   color-scheme: light;
   scroll-behavior: smooth;
+  overflow-x: clip;
   background: var(--color-canvas);
 }
 
 body {
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+  overflow-x: clip;
+  overflow-wrap: break-word;
   font-family: var(--font-body);
   font-size: var(--text-base);
   line-height: var(--line-body);
@@ -20,6 +28,9 @@ body {
 
 main {
   display: block;
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
 }
 
 h1,

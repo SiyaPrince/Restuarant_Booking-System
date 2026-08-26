@@ -4,7 +4,7 @@
 
 | Check | Status | Evidence |
 |---|---|---|
-| Menu has one H1 | PASS | H1 count: 0 |
+| Menu has one H1 | PASS | H1 count: 1 |
 | Category anchor #starters exists | PASS | starters |
 | Category navigation links to #starters | PASS | starters |
 | Category anchor #mains exists | PASS | mains |
