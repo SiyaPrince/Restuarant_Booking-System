@@ -23,7 +23,7 @@
   <body>
     <a class="skip-link" href="#main-content">Skip to main content</a>
 
-    <header class="site-header">
+    <header class="site-header" data-site-header>
       <div class="container site-header__inner">
         <a class="site-header__brand" href="index.html" aria-label="The Table home">THE TABLE</a>
 
@@ -40,8 +40,8 @@
           <a class="button button--primary" href="reservations.html">Reserve</a>
         </div>
 
-        <details class="mobile-nav">
-          <summary class="mobile-nav__toggle" aria-label="Open site menu">
+        <details class="mobile-nav" data-mobile-nav>
+          <summary class="mobile-nav__toggle" data-mobile-nav-toggle aria-label="Open site menu" aria-expanded="false" aria-controls="mobile-navigation-panel">
             <span class="mobile-nav__toggle-label mobile-nav__toggle-label--menu">Menu</span>
             <span class="mobile-nav__toggle-label mobile-nav__toggle-label--close">Close</span>
             <span class="mobile-nav__icon" aria-hidden="true">
@@ -50,7 +50,7 @@
             </span>
           </summary>
 
-          <div class="mobile-nav__panel">
+          <div class="mobile-nav__panel" id="mobile-navigation-panel" data-mobile-nav-panel aria-hidden="true">
             <div class="mobile-nav__panel-inner">
               <a class="mobile-nav__brand" href="index.html">THE TABLE</a>
 
@@ -120,76 +120,76 @@
 
       <section class="gallery-section" aria-label="The Table gallery">
         <div class="container--wide">
-          <div class="gallery-grid">
-            <figure class="gallery-item gallery-item--portrait gallery-item--a">
+          <div class="gallery-grid" data-gallery>
+            <figure class="gallery-item gallery-item--portrait gallery-item--a" data-gallery-item tabindex="0" role="button" aria-label="Open Signature dish" data-gallery-label="Signature dish" data-gallery-caption="Seasonal menu · Winter">
               <div class="gallery-item__media" aria-hidden="true">
                 <span>Signature dish</span>
               </div>
               <figcaption>Seasonal menu · Winter</figcaption>
             </figure>
 
-            <figure class="gallery-item gallery-item--wide gallery-item--b">
+            <figure class="gallery-item gallery-item--wide gallery-item--b" data-gallery-item tabindex="0" role="button" aria-label="Open Dining room · Evening service" data-gallery-label="Dining room · Evening service" data-gallery-caption="Dining room during evening service">
               <div class="gallery-item__media" aria-hidden="true">
                 <span>Dining room · Evening service</span>
               </div>
             </figure>
 
-            <figure class="gallery-item gallery-item--landscape gallery-item--c">
+            <figure class="gallery-item gallery-item--landscape gallery-item--c" data-gallery-item tabindex="0" role="button" aria-label="Open Kitchen" data-gallery-label="Kitchen" data-gallery-caption="Chef working in the kitchen">
               <div class="gallery-item__media" aria-hidden="true">
                 <span>Kitchen</span>
               </div>
             </figure>
 
-            <figure class="gallery-item gallery-item--square gallery-item--d">
+            <figure class="gallery-item gallery-item--square gallery-item--d" data-gallery-item tabindex="0" role="button" aria-label="Open Table detail" data-gallery-label="Table detail" data-gallery-caption="Table setting detail">
               <div class="gallery-item__media" aria-hidden="true">
                 <span>Table detail</span>
               </div>
             </figure>
 
-            <figure class="gallery-item gallery-item--portrait gallery-item--e">
+            <figure class="gallery-item gallery-item--portrait gallery-item--e" data-gallery-item tabindex="0" role="button" aria-label="Open From the kitchen" data-gallery-label="From the kitchen" data-gallery-caption="Contemporary South African dish">
               <div class="gallery-item__media" aria-hidden="true">
                 <span>From the kitchen</span>
               </div>
             </figure>
 
-            <figure class="gallery-item gallery-item--wide gallery-item--f">
+            <figure class="gallery-item gallery-item--wide gallery-item--f" data-gallery-item tabindex="0" role="button" aria-label="Open Gathered at The Table" data-gallery-label="Gathered at The Table" data-gallery-caption="Long evenings · Shared plates">
               <div class="gallery-item__media" aria-hidden="true">
                 <span>Gathered at The Table</span>
               </div>
               <figcaption>Long evenings · Shared plates</figcaption>
             </figure>
 
-            <figure class="gallery-item gallery-item--portrait gallery-item--g">
+            <figure class="gallery-item gallery-item--portrait gallery-item--g" data-gallery-item tabindex="0" role="button" aria-label="Open Interior" data-gallery-label="Interior" data-gallery-caption="Warm restaurant interior">
               <div class="gallery-item__media" aria-hidden="true">
                 <span>Interior</span>
               </div>
             </figure>
 
-            <figure class="gallery-item gallery-item--square gallery-item--h">
+            <figure class="gallery-item gallery-item--square gallery-item--h" data-gallery-item tabindex="0" role="button" aria-label="Open At the table" data-gallery-label="At the table" data-gallery-caption="Wine being poured at the table">
               <div class="gallery-item__media" aria-hidden="true">
                 <span>At the table</span>
               </div>
             </figure>
 
-            <figure class="gallery-item gallery-item--landscape gallery-item--i">
+            <figure class="gallery-item gallery-item--landscape gallery-item--i" data-gallery-item tabindex="0" role="button" aria-label="Open Service" data-gallery-label="Service" data-gallery-caption="Chef plating during service">
               <div class="gallery-item__media" aria-hidden="true">
                 <span>Service</span>
               </div>
             </figure>
 
-            <figure class="gallery-item gallery-item--portrait gallery-item--j">
+            <figure class="gallery-item gallery-item--portrait gallery-item--j" data-gallery-item tabindex="0" role="button" aria-label="Open Dessert" data-gallery-label="Dessert" data-gallery-caption="Dessert">
               <div class="gallery-item__media" aria-hidden="true">
                 <span>Dessert</span>
               </div>
             </figure>
 
-            <figure class="gallery-item gallery-item--wide gallery-item--k">
+            <figure class="gallery-item gallery-item--wide gallery-item--k" data-gallery-item tabindex="0" role="button" aria-label="Open Rosebank · Johannesburg" data-gallery-label="Rosebank · Johannesburg" data-gallery-caption="Restaurant exterior at dusk">
               <div class="gallery-item__media" aria-hidden="true">
                 <span>Rosebank · Johannesburg</span>
               </div>
             </figure>
 
-            <figure class="gallery-item gallery-item--square gallery-item--l">
+            <figure class="gallery-item gallery-item--square gallery-item--l" data-gallery-item tabindex="0" role="button" aria-label="Open Evening detail" data-gallery-label="Evening detail" data-gallery-caption="Candle and place setting">
               <div class="gallery-item__media" aria-hidden="true">
                 <span>Evening detail</span>
               </div>
@@ -209,6 +209,34 @@
           </div>
         </div>
       </section>
+
+      <dialog class="lightbox" data-lightbox aria-label="Gallery image viewer">
+        <div class="lightbox__shell">
+          <div class="lightbox__topbar">
+            <p class="lightbox__counter" data-lightbox-counter aria-live="polite">1 / 12</p>
+            <button class="lightbox__close" type="button" data-lightbox-close aria-label="Close gallery viewer">
+              Close
+            </button>
+          </div>
+
+          <div class="lightbox__media" data-lightbox-media role="img" aria-label=""></div>
+
+          <div class="lightbox__footer">
+            <button class="lightbox__nav" type="button" data-lightbox-previous aria-label="Previous gallery image">
+              <span aria-hidden="true">←</span>
+              Previous
+            </button>
+
+            <p class="lightbox__caption" data-lightbox-caption></p>
+
+            <button class="lightbox__nav" type="button" data-lightbox-next aria-label="Next gallery image">
+              Next
+              <span aria-hidden="true">→</span>
+            </button>
+          </div>
+        </div>
+      </dialog>
+
     </main>
 
     <footer class="site-footer">
@@ -243,7 +271,6 @@
             <p class="site-footer__heading">Contact</p>
             <ul class="site-footer__list" role="list">
               <li><a class="site-footer__link" href="mailto:hello@thetable.co.za">hello@thetable.co.za</a></li>
-              <li><span class="site-footer__text">Phone number to be confirmed</span></li>
             </ul>
           </div>
         </div>
@@ -254,5 +281,6 @@
         </div>
       </div>
     </footer>
+    <script type="module" src="js/main.js"></script>
   </body>
 </html>
