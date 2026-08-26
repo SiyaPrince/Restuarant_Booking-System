@@ -104,7 +104,7 @@
     <main id="main-content">
       <section class="contact-intro section">
         <div class="container">
-          <div class="contact-intro__grid">
+          <div class="contact-intro__grid" data-reveal>
             <div class="stack stack--lg">
               <p class="eyebrow">Contact</p>
               <h1>Come find your seat.</h1>
@@ -150,7 +150,7 @@
       <section class="contact-directions section--compact" id="directions" aria-labelledby="directions-heading">
         <div class="container--wide">
           <div class="contact-directions__surface">
-            <div class="contact-directions__copy">
+            <div class="contact-directions__copy" data-reveal>
               <p class="eyebrow">Rosebank · Johannesburg</p>
               <h2 id="directions-heading">Find The Table.</h2>
               <p>
@@ -169,7 +169,7 @@
       <section class="contact-form-section section" aria-labelledby="contact-form-title">
         <div class="container">
           <div class="contact-form-section__grid">
-            <div class="contact-form-section__intro stack stack--lg">
+            <div class="contact-form-section__intro stack stack--lg" data-reveal>
               <p class="eyebrow">Get in touch</p>
               <h2 id="contact-form-title">Send us a note.</h2>
               <p>
@@ -178,7 +178,7 @@
               </p>
             </div>
 
-            <form class="contact-form" aria-describedby="contact-status-note" data-contact-form>
+            <form class="contact-form" aria-describedby="contact-status-note" data-contact-form data-reveal>
               <div class="form-field">
                 <label for="contact-name">Name</label>
                 <input
@@ -228,7 +228,7 @@
 
               <div class="form-status" id="contact-form-status" data-form-status role="status" aria-live="polite" hidden></div>
 
-              <button class="button button--primary contact-form__submit" type="button" disabled>
+              <button class="button button--primary contact-form__submit" type="submit">
                 Send Message
               </button>
             </form>

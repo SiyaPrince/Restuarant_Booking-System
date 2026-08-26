@@ -5,6 +5,7 @@ export function initHeader() {
   if (!header) return;
 
   const isOverlayHeader = header.classList.contains("site-header--overlay");
+  let framePending = false;
 
   function syncHeaderState() {
     const scrolled = window.scrollY > SCROLL_THRESHOLD;
@@ -17,7 +18,17 @@ export function initHeader() {
     }
   }
 
+  function requestHeaderSync() {
+    if (framePending) return;
+
+    framePending = true;
+    requestAnimationFrame(() => {
+      syncHeaderState();
+      framePending = false;
+    });
+  }
+
   syncHeaderState();
 
-  window.addEventListener("scroll", syncHeaderState, { passive: true });
+  window.addEventListener("scroll", requestHeaderSync, { passive: true });
 }

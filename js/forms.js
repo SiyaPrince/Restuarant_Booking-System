@@ -121,20 +121,21 @@ export function clearFormStatus(statusElement) {
   statusElement.hidden = true;
 }
 
-export function bindLiveErrorClearing(form) {
+export function bindLiveErrorClearing(form, validateField) {
   if (!form) return;
 
-  form.addEventListener("input", (event) => {
+  function handleCorrection(event) {
     const field = event.target.closest("input, select, textarea");
     if (!field || field.getAttribute("aria-invalid") !== "true") return;
 
-    clearFieldError(field);
-  });
-
-  form.addEventListener("change", (event) => {
-    const field = event.target.closest("input, select, textarea");
-    if (!field || field.getAttribute("aria-invalid") !== "true") return;
+    if (typeof validateField === "function") {
+      validateField(field);
+      return;
+    }
 
     clearFieldError(field);
-  });
+  }
+
+  form.addEventListener("input", handleCorrection);
+  form.addEventListener("change", handleCorrection);
 }

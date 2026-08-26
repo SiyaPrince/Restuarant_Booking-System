@@ -207,3 +207,56 @@
     transform: none;
   }
 }
+
+
+/* --------------------------------------------------------------------------
+   Mobile gallery gutter repair
+   Keeps every gallery surface inside the page container with equal left/right
+   breathing room. This intentionally changes only Gallery page sizing.
+   -------------------------------------------------------------------------- */
+
+.gallery-grid,
+.gallery-item,
+.gallery-item__media {
+  min-width: 0;
+  max-width: 100%;
+}
+
+.gallery-item {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+@media (max-width: 47.99rem) {
+  .gallery-page .container,
+  .gallery-section .container,
+  .gallery-intro .container,
+  .gallery-cta .container {
+    width: 100%;
+    max-width: 100%;
+    padding-inline: var(--page-gutter);
+    box-sizing: border-box;
+  }
+
+  .gallery-grid {
+    width: 100%;
+    grid-template-columns: minmax(0, 1fr);
+    margin-inline: 0;
+  }
+
+  .gallery-item,
+  .gallery-item--wide,
+  .gallery-item--tall,
+  .gallery-item--standard {
+    width: 100%;
+    max-width: 100%;
+    margin-inline: 0;
+    grid-column: auto;
+  }
+
+  .gallery-item__media {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+}

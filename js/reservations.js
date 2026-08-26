@@ -25,7 +25,14 @@ export function initReservations() {
 
   form.noValidate = true;
   setMinimumReservationDate(date);
-  bindLiveErrorClearing(form);
+  bindLiveErrorClearing(form, (field) => {
+    if (field === date) validateReservationDate(date);
+    else if (field === time) validateRequired(time, "Please choose a reservation time.");
+    else if (field === guests) validateGuestCount(guests);
+    else if (field === name) validateRequired(name, "Please enter your full name.");
+    else if (field === email) validateEmail(email);
+    else if (field === phone) validatePhone(phone);
+  });
 
   form.addEventListener("input", () => clearFormStatus(status));
   form.addEventListener("change", () => clearFormStatus(status));

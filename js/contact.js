@@ -22,7 +22,12 @@ export function initContact() {
   if (!name || !email || !subject || !message) return;
 
   form.noValidate = true;
-  bindLiveErrorClearing(form);
+  bindLiveErrorClearing(form, (field) => {
+    if (field === name) validateRequired(name, "Please enter your name.");
+    else if (field === email) validateEmail(email);
+    else if (field === subject) validateRequired(subject, "Please enter a subject.");
+    else if (field === message) validateMessage(message);
+  });
 
   form.addEventListener("input", () => clearFormStatus(status));
   form.addEventListener("change", () => clearFormStatus(status));

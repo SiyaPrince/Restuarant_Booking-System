@@ -168,3 +168,190 @@
     padding-right: var(--space-2xl);
   }
 }
+
+/* --------------------------------------------------------------------------
+   Form visual system — page-owned repair
+   -------------------------------------------------------------------------- */
+
+.form-field {
+  display: grid;
+  gap: 0.625rem;
+  min-width: 0;
+}
+
+.form-field label {
+  color: var(--color-ink);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  line-height: var(--line-interface);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+  width: 100%;
+  min-width: 0;
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  line-height: 1.4;
+  background: var(--color-white-soft);
+  border: 1px solid color-mix(in srgb, var(--color-ink) 28%, var(--color-border));
+  border-radius: var(--radius-md);
+  box-shadow: none;
+  transition:
+    border-color var(--duration-standard) var(--ease-standard),
+    box-shadow var(--duration-standard) var(--ease-standard),
+    background-color var(--duration-standard) var(--ease-standard);
+}
+
+.form-field input,
+.form-field select {
+  min-height: 3.75rem;
+  padding: 0.85rem 1rem;
+}
+
+.form-field select {
+  cursor: pointer;
+}
+
+.form-field textarea {
+  min-height: 10.5rem;
+  padding: 1rem;
+  resize: vertical;
+}
+
+.form-field input:hover,
+.form-field select:hover,
+.form-field textarea:hover {
+  border-color: color-mix(in srgb, var(--color-ink) 46%, var(--color-border));
+}
+
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+  outline: none;
+  background: #fffdf9;
+  border-color: var(--color-brand);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-brand) 14%, transparent);
+}
+
+.form-field input::placeholder,
+.form-field textarea::placeholder {
+  color: var(--color-ink-soft);
+  opacity: 0.72;
+}
+
+.form-field__help {
+  max-width: 54ch;
+  color: var(--color-ink-soft);
+  font-size: var(--text-sm);
+  line-height: 1.55;
+}
+
+.form-field--error input,
+.form-field--error select,
+.form-field--error textarea {
+  border-color: var(--color-error);
+}
+
+.form-field--error input:focus,
+.form-field--error select:focus,
+.form-field--error textarea:focus {
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-error) 12%, transparent);
+}
+
+.form-status[hidden] {
+  display: none !important;
+}
+
+
+/* --------------------------------------------------------------------------
+   Reservations form composition
+   -------------------------------------------------------------------------- */
+
+.reservation-form {
+  display: grid;
+  gap: clamp(2rem, 1.5rem + 1.25vw, 3rem);
+  width: 100%;
+  max-width: 46rem;
+  padding: clamp(1.5rem, 1.1rem + 1.5vw, 2.5rem);
+  background: color-mix(in srgb, var(--color-white-soft) 74%, var(--color-canvas));
+  border: 1px solid color-mix(in srgb, var(--color-border) 78%, transparent);
+  border-radius: var(--radius-lg);
+}
+
+.reservation-form__group {
+  display: grid;
+  gap: var(--space-lg);
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.reservation-form__group + .reservation-form__group {
+  padding-top: clamp(2rem, 1.4rem + 1.5vw, 3rem);
+  border-top: var(--border-default);
+}
+
+.reservation-form__group legend {
+  width: 100%;
+  margin: 0 0 var(--space-lg);
+  padding: 0;
+  color: var(--color-ink);
+  font-family: var(--font-display);
+  font-size: var(--text-h4);
+  font-weight: 500;
+  line-height: var(--line-heading);
+}
+
+.reservation-form__row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-lg);
+}
+
+.reservation-form__note {
+  margin: 0;
+  padding: 1rem 1.125rem;
+  color: var(--color-ink-soft);
+  font-size: var(--text-sm);
+  line-height: 1.6;
+  background: color-mix(in srgb, var(--color-surface) 46%, var(--color-canvas));
+  border-left: 3px solid var(--color-brand);
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+}
+
+.reservation-form__submit {
+  min-width: 12.5rem;
+  justify-self: start;
+}
+
+@media (min-width: 40rem) {
+  .reservation-form__row {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .reservation-form__group:nth-of-type(2) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .reservation-form__group:nth-of-type(2) legend,
+  .reservation-form__group:nth-of-type(2) .form-field:first-of-type,
+  .reservation-form__group:nth-of-type(2) .form-field:last-of-type {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 47.99rem) {
+  .reservations__grid {
+    gap: var(--space-2xl);
+  }
+
+  .reservation-form {
+    max-width: none;
+  }
+}

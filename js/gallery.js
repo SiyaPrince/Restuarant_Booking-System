@@ -57,6 +57,11 @@ export function initGallery() {
   previousButton.addEventListener("click", () => showItem(currentIndex - 1));
   nextButton.addEventListener("click", () => showItem(currentIndex + 1));
 
+  dialog.addEventListener("cancel", (event) => {
+    event.preventDefault();
+    closeLightbox();
+  });
+
   dialog.addEventListener("click", (event) => {
     if (event.target === dialog) {
       closeLightbox();

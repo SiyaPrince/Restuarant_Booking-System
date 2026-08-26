@@ -41,7 +41,6 @@ export function initNavigation() {
   function closeNavigation() {
     if (!nav.open) return;
     nav.open = false;
-    syncState();
   }
 
   function trapFocus(event) {

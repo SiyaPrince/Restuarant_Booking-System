@@ -36,6 +36,12 @@ export function initMenu() {
     });
   }
 
+  if (!("IntersectionObserver" in window)) {
+    const initialId = getInitialCategoryId(sections);
+    if (initialId) setActiveCategory(initialId);
+    return;
+  }
+
   const observer = new IntersectionObserver(
     (entries) => {
       const visible = entries

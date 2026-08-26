@@ -105,7 +105,7 @@
       <section class="reservations section">
         <div class="container">
           <div class="reservations__grid">
-            <div class="reservations__intro stack stack--lg">
+            <div class="reservations__intro stack stack--lg" data-reveal>
               <p class="eyebrow">Reservations</p>
               <h1>Your table is waiting.</h1>
               <p class="reservations__lead">
@@ -119,7 +119,7 @@
               </div>
             </div>
 
-            <form class="reservation-form" aria-describedby="reservation-status-note" data-reservation-form>
+            <form class="reservation-form" aria-describedby="reservation-status-note" data-reservation-form data-reveal>
               <fieldset class="reservation-form__group">
                 <legend>Your visit</legend>
 
@@ -127,7 +127,7 @@
                   <label for="reservation-date">Date</label>
                   <input
                     id="reservation-date"
-                    name="reservation_date"
+                    name="date"
                     type="date"
                     required
                   >
@@ -136,7 +136,7 @@
                 <div class="reservation-form__row">
                   <div class="form-field">
                     <label for="reservation-time">Time</label>
-                    <select id="reservation-time" name="reservation_time" required>
+                    <select id="reservation-time" name="time" required>
                       <option value="">Select a time</option>
                       <option value="17:30">17:30</option>
                       <option value="18:00">18:00</option>
@@ -151,7 +151,7 @@
 
                   <div class="form-field">
                     <label for="guest-count">Guests</label>
-                    <select id="guest-count" name="guest_count" required>
+                    <select id="guest-count" name="guests" required>
                       <option value="">Select party size</option>
                       <option value="1">1 guest</option>
                       <option value="2">2 guests</option>
@@ -224,7 +224,7 @@
 
               <div class="form-status" id="reservation-form-status" data-form-status role="status" aria-live="polite" hidden></div>
 
-              <button class="button button--primary reservation-form__submit" type="button" disabled>
+              <button class="button button--primary reservation-form__submit" type="submit">
                 Request a Table
               </button>
             </form>
@@ -234,12 +234,12 @@
 
       <section class="reservation-notes section--compact" aria-labelledby="booking-notes-title">
         <div class="container">
-          <div class="reservation-notes__intro">
+          <div class="reservation-notes__intro" data-reveal>
             <p class="eyebrow">Good to know</p>
             <h2 id="booking-notes-title">Before you join us.</h2>
           </div>
 
-          <div class="reservation-notes__grid">
+          <div class="reservation-notes__grid" data-reveal>
             <article class="reservation-note">
               <p class="reservation-note__number">01</p>
               <h3>Groups</h3>

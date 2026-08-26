@@ -1,114 +1,54 @@
-# The Table — Current State
+# The Table — Current Project State
 
-## Current Iteration
+## Current Stage
 
-**Version 1.9 — Static HTML/CSS acceptance candidate**
+**Version 2 — JavaScript interaction layer acceptance candidate (v2.9)**
 
-## Implemented
+## Implemented Pages
 
-### Shared Foundation
+- Home
+- Menu
+- About
+- Gallery
+- Reservations
+- Contact
 
-- Six-page semantic HTML5 structure.
-- Shared primary navigation and footer.
-- Skip-to-content accessibility foundation.
-- Global design tokens.
-- Cormorant Garamond / Inter typography system.
-- Mobile-first layout primitives.
-- Shared buttons, links, form controls, header and footer styles.
-- Reduced-motion handling.
-- Responsive page-specific CSS.
+## Implemented Version 2 Interactions
 
-### Home
+- Mobile full-screen navigation enhancement.
+- Escape handling, focus trap/restoration and background scroll lock.
+- Sticky/scrolled shared header.
+- Shared accessible form-validation utilities.
+- Reservation-form client-side validation.
+- Contact-form client-side validation.
+- Accessible gallery lightbox using native `<dialog>`.
+- Menu category tracking using IntersectionObserver.
+- Restrained reveal motion with reduced-motion support.
 
-- Cinematic hero composition.
-- Restaurant identity and primary CTAs.
-- Short restaurant introduction.
-- Three-item featured menu teaser.
-- Atmosphere / Gallery teaser.
-- Compact reservation CTA.
-- Essential visit information.
+## Progressive Enhancement
 
-### Menu
+- Navigation retains a native HTML fallback.
+- Menu anchors work without JavaScript.
+- Content remains available without reveal JavaScript.
+- Form HTML remains semantic.
+- Gallery content remains visible without the lightbox.
 
-- Seasonal menu introduction.
-- Anchor-based category navigation.
-- Starters, Mains, Desserts and Drinks.
-- Dietary key.
-- Editorial visual breaks.
-- Compact reservation CTA.
+## Still Deferred
 
-### About
+- Final restaurant photography.
+- Final fictional street address and telephone number.
+- Backend reservation submission/persistence.
+- Contact message delivery.
+- Authentication.
+- Database.
+- React / TypeScript migration.
 
-- Restaurant introduction and story.
-- Editorial image composition.
-- Deep Olive kitchen-philosophy section.
-- Seasonal / Rooted / Considered principles.
-- Executive chef section.
-- Closing location link.
+## Acceptance Status
 
-### Gallery
+Static/code acceptance: see `verification_results_v2_9.md`.
 
-- Concise gallery introduction.
-- 12-item editorial grid.
-- Controlled image aspect-ratio system.
-- Responsive mobile/tablet/desktop grid rules.
-- Compact reservation CTA.
+Real browser interaction and responsive visual QA must still be completed on a real browser/device before Version 2 is formally locked.
 
-### Reservations
+## Next Stage After V2 Acceptance
 
-- Semantic reservation-request form.
-- Date, time and guest fields.
-- Full name, email, phone and special requests.
-- Booking guidance section.
-- Static action intentionally disabled until real submission functionality exists.
-
-### Contact
-
-- Visit information.
-- Email contact.
-- Full weekly opening hours.
-- Pre-publication directions section.
-- General enquiry form.
-- Static action intentionally disabled until real message delivery exists.
-
-## Version 1 Boundaries Preserved
-
-- No JavaScript.
-- No package-manager dependencies.
-- No CSS framework.
-- No backend.
-- No database.
-- No authentication.
-- No fake successful reservation or message submission.
-
-## Open Acceptance Items
-
-1. Final restaurant photography is not installed.
-2. Exact fictional street address is not finalised.
-3. Telephone number is not finalised.
-4. Real-browser visual QA remains required at desktop, tablet and mobile widths.
-5. Any issues found during browser QA must be repaired before Version 1 is tagged complete.
-
-## Verification State
-
-- Cross-page static verification v1.8: passed.
-- Expanded static acceptance verification v1.9: see `verification_results_v1_9.md`.
-- Browser rendering in the current automation environment: blocked by the environment and therefore not counted as evidence.
-- Local human/browser verification: not yet recorded.
-
-## Next Bounded Task
-
-Perform real-browser Version 1 visual QA and integrate final content assets. Do not start Version 2 JavaScript before the Version 1 acceptance gate is closed.
-
-## Mobile QA Repair — v1.10
-
-The first real mobile visual QA identified two cross-page defects:
-
-- horizontal page overflow exposing the canvas beside dark sections/footer
-- missing approved hamburger/mobile navigation treatment
-
-v1.10 repairs both while preserving the Version 1 no-JavaScript constraint by using the native HTML `details`/`summary` disclosure pattern for mobile navigation.
-
-The mobile navigation is now a full-screen dark overlay with Home, Menu, About, Gallery, Contact and Reserve actions. Desktop navigation remains unchanged above the tablet breakpoint.
-
-Container sizing and shared overflow behavior were also hardened across the site.
+Version 3 planning: migrate the established product into React components without redesigning the product.

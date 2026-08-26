@@ -88,3 +88,50 @@ Start with:
 7. Production engineering.
 
 The product design should evolve rather than being repeatedly rebuilt.
+
+
+## Version 2 Status
+
+**V2.1 — JavaScript foundation and mobile navigation**
+
+The project now uses native ES modules. The first JavaScript enhancement improves the existing mobile navigation while preserving the Version 1 no-JavaScript fallback.
+
+
+### V2.2 — Sticky / Scrolled Header
+
+The shared header now has JavaScript-enhanced scroll state. Home transitions from the transparent hero overlay to the standard Warm Ivory navigation treatment after scrolling.
+
+
+### V2.3 — Shared Form Validation Architecture
+
+A reusable accessible validation layer now exists for Reservations and Contact. Page-specific validation is intentionally deferred to the next bounded iterations.
+
+
+### V2.4 — Reservation Validation
+
+The Reservations page now uses the shared accessible validation layer for date, time, guests, name, email and phone. Valid frontend input produces an honest readiness state rather than a false booking confirmation.
+
+
+### V2.5 — Contact Validation
+
+The Contact page now uses the shared accessible validation layer for name, email, subject and message. Valid frontend input produces an honest readiness state rather than a false delivery confirmation.
+
+
+### V2.6 — Gallery Lightbox
+
+Gallery items now open in an accessible full-screen viewer with keyboard navigation, previous/next controls, focus management and scroll locking.
+
+
+### V2.7 — Menu Active Category
+
+The sticky Menu category navigation now tracks the visible section using IntersectionObserver while preserving the original anchor-link fallback.
+
+
+### V2.8 — Restrained Reveal Motion
+
+Selected editorial content now reveals on entry using IntersectionObserver. Motion is intentionally limited and respects `prefers-reduced-motion`.
+
+
+## Version 2 Acceptance Candidate — v2.9
+
+All planned JavaScript interactions are implemented. A cross-page code/accessibility review has been completed and repaired. Real-browser interaction QA remains the final Version 2 acceptance requirement before the React migration.
