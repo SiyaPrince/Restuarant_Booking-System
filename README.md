@@ -775,6 +775,28 @@ Because The Table is a frontend-only project:
 
 These limitations are intentional and should not be interpreted as incomplete backend implementation.
 
+### Extending the Project With Your Own Backend
+
+Although The Table is intentionally maintained as a frontend-only learning project, the repository can also be used as a starting point for a more complete restaurant application.
+
+Anyone who wants to extend the project may clone or fork the repository and connect the existing frontend to a backend of their own choosing. For example, a developer could add:
+
+- a reservation API
+- a database for bookings and customer details
+- contact-form delivery
+- authentication
+- an administration dashboard
+- menu management
+- table availability
+- email or SMS confirmations
+- payment or ordering functionality
+
+The existing HTML, CSS, and JavaScript frontend is intentionally separated from those concerns, so backend functionality can be added without changing the purpose of this repository itself.
+
+A developer extending the project is free to choose the backend stack that best fits their needs, such as Node.js, Python, Java, .NET, PHP, or another server-side technology.
+
+The official scope of **The Table** remains frontend-only. Backend implementations created from this project should therefore be treated as independent extensions or forks rather than part of the core learning project.
+
 ---
 
 ## Learning Outcomes
