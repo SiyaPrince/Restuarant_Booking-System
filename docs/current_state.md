@@ -84,3 +84,7 @@ Any future correction to this baseline should be explicit, documented, and verif
 **Version 3 — React migration planning**
 
 The React phase must migrate the accepted product rather than redesign it.
+
+## Imagery Completion
+
+The previously abstract media surfaces have been connected to generated restaurant imagery across Home, Menu, About, and Gallery. The Gallery now uses real image elements and its lightbox displays the selected image rather than placeholder text. See `docs/IMAGE_ASSET_INVENTORY.md` for the asset map.

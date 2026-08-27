@@ -15,11 +15,15 @@
 .home-hero__media {
   position: absolute;
   inset: 0;
-  background:
-    linear-gradient(90deg, rgba(18, 20, 17, 0.9) 0%, rgba(18, 20, 17, 0.64) 45%, rgba(18, 20, 17, 0.24) 78%, rgba(18, 20, 17, 0.34) 100%),
-    radial-gradient(circle at 76% 38%, rgba(183, 150, 98, 0.38), transparent 25%),
-    radial-gradient(circle at 62% 67%, rgba(167, 98, 69, 0.28), transparent 24%),
-    linear-gradient(135deg, #263028 0%, #594b3b 48%, #181a16 100%);
+  overflow: hidden;
+}
+
+.home-hero__media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 .home-hero__media::after {
@@ -153,12 +157,12 @@
 }
 
 .home-featured__media-surface {
+  display: block;
+  width: 100%;
   aspect-ratio: 4 / 5;
   min-height: 24rem;
-  background:
-    radial-gradient(circle at 54% 45%, rgba(244, 240, 232, 0.5), transparent 15%),
-    radial-gradient(circle at 50% 50%, rgba(167, 98, 69, 0.78), transparent 27%),
-    linear-gradient(145deg, #4c453a 0%, #9c765d 45%, #2e332c 100%);
+  object-fit: cover;
+  object-position: center;
 }
 
 .home-featured__dishes {
@@ -240,12 +244,12 @@
 }
 
 .home-atmosphere__media-surface {
+  display: block;
+  width: 100%;
   aspect-ratio: 4 / 5;
   min-height: 25rem;
-  background:
-    linear-gradient(180deg, rgba(28, 28, 25, 0.08), rgba(28, 28, 25, 0.3)),
-    radial-gradient(circle at 40% 32%, rgba(183, 150, 98, 0.48), transparent 22%),
-    linear-gradient(140deg, #62503f 0%, #2f352e 42%, #171916 100%);
+  object-fit: cover;
+  object-position: center;
 }
 
 /* Reservation CTA */

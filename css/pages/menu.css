@@ -154,21 +154,29 @@
 }
 
 .menu-media__surface {
-  display: grid;
+  position: relative;
+  overflow: hidden;
   min-height: clamp(20rem, 45vw, 38rem);
-  place-items: end start;
-  padding: var(--space-xl);
-  color: var(--color-white-soft);
-  background:
-    linear-gradient(135deg, rgba(28, 28, 25, 0.22), rgba(57, 68, 56, 0.72)),
-    var(--color-brand);
+  margin: 0;
 }
 
 .menu-media__surface--dark {
   min-height: clamp(16rem, 32vw, 26rem);
-  background:
-    linear-gradient(135deg, rgba(28, 28, 25, 0.38), rgba(28, 28, 25, 0.78)),
-    var(--color-ink);
+}
+
+
+.menu-media__surface img {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.menu-media__surface--dark img {
+  object-position: center 35%;
 }
 
 .menu-media__surface span {

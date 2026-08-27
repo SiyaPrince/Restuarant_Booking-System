@@ -27,15 +27,48 @@
   display: grid;
   overflow: hidden;
   color: var(--color-white-soft);
-  background:
-    linear-gradient(135deg, rgba(28, 28, 25, 0.18), rgba(57, 68, 56, 0.7)),
-    var(--color-brand);
+  background: var(--color-brand);
 }
 
 .about-hero__media {
   min-height: clamp(26rem, 50vw, 42rem);
-  place-items: end start;
-  padding: var(--space-xl);
+  margin: 0;
+}
+
+
+.about-hero__media img,
+.about-images__large img,
+.about-images__small img,
+.about-chef__media img {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about-chef__media img {
+  object-position: center 28%;
+}
+
+.about-closing__image {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.about-closing__media::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: linear-gradient(90deg, rgba(28, 28, 25, 0.76), rgba(28, 28, 25, 0.18));
+  pointer-events: none;
 }
 
 .about-hero__media span,
@@ -74,17 +107,12 @@
 
 .about-images__large {
   min-height: clamp(24rem, 52vw, 44rem);
-  place-items: end start;
-  padding: var(--space-lg);
+  margin: 0;
 }
 
 .about-images__small {
   min-height: clamp(16rem, 36vw, 28rem);
-  place-items: end start;
-  padding: var(--space-lg);
-  background:
-    linear-gradient(145deg, rgba(167, 98, 69, 0.2), rgba(28, 28, 25, 0.62)),
-    var(--color-clay);
+  margin: 0;
 }
 
 .about-kitchen__intro {
@@ -149,11 +177,7 @@
 
 .about-chef__media {
   min-height: clamp(28rem, 58vw, 46rem);
-  place-items: end start;
-  padding: var(--space-lg);
-  background:
-    linear-gradient(145deg, rgba(28, 28, 25, 0.16), rgba(28, 28, 25, 0.68)),
-    var(--color-ink-soft);
+  margin: 0;
 }
 
 .about-chef__copy h2 {
@@ -188,12 +212,11 @@
   min-height: clamp(28rem, 54vw, 44rem);
   align-items: end;
   padding: var(--space-xl);
-  background:
-    linear-gradient(90deg, rgba(28, 28, 25, 0.76), rgba(28, 28, 25, 0.16)),
-    var(--color-ink);
 }
 
 .about-closing__copy {
+  position: relative;
+  z-index: 1;
   max-width: 42rem;
 }
 

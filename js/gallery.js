@@ -21,6 +21,8 @@ export function initGallery() {
   const items = [...gallery.querySelectorAll(SELECTORS.item)];
   if (!items.length) return;
 
+  gallery.dataset.galleryReady = "true";
+
   const media = dialog.querySelector(SELECTORS.media);
   const caption = dialog.querySelector(SELECTORS.caption);
   const counter = dialog.querySelector(SELECTORS.counter);
@@ -126,8 +128,13 @@ export function initGallery() {
       item.querySelector("figcaption")?.textContent?.trim() ||
       label;
 
-    media.textContent = label;
-    media.setAttribute("aria-label", label);
+    const sourceImage = item.querySelector(".gallery-item__media");
+
+    if (sourceImage instanceof HTMLImageElement) {
+      media.src = sourceImage.currentSrc || sourceImage.src;
+      media.alt = sourceImage.alt || label;
+    }
+
     caption.textContent = description;
     counter.textContent = `${currentIndex + 1} / ${items.length}`;
   }

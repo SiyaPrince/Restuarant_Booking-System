@@ -976,3 +976,7 @@ It intentionally stops there.
 The project demonstrates the ability to work with the browser directly, build and maintain a visual system, create responsive layouts, implement interaction without a framework, apply accessibility practices, and validate the finished interface through real-browser testing.
 
 Rather than turning one restaurant website into an example of every technology in the web stack, The Table establishes a strong frontend-fundamentals baseline from which later projects can introduce React, TypeScript, other frontend frameworks, backend development, and eventually full-stack architecture.
+
+## Image Markup Strategy
+
+The final frontend uses explicit HTML image elements for planned imagery. Meaningful food, restaurant, chef, kitchen and atmosphere photographs use `<img>` elements with descriptive alternative text. The Home hero also contains an explicit `<img>` but uses an empty `alt` because the photograph is decorative and the surrounding HTML already communicates the section's meaning. Gallery photographs remain semantic image content and drive the lightbox viewer.
